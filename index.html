@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Exercise</title>
+    
+    <script type="text/javascript" src="javascript.js"></script>
+
+    <style>
+       .main1{
+        border: 1px solid black;
+        width: 280px;
+        padding: 10px;
+        align-content: center;
+       }
+       
+       #p1, #num1{
+        display: inline-block;
+       }
+
+       #p2, #num2{
+        display: inline-block;
+       }
+
+       #rslt,#result{display: inline-block;}
+
+       .main4{
+        border: 1px solid black;
+        width: 350px;
+        height: auto;
+        padding: 10px;
+        padding-bottom: 1px;
+        align-content: center;
+    }
+    
+    section{
+        text-align: center;
+    }
+
+    #p1-1, #itemCost{
+        display: inline-block;
+       }
+
+       #p1-1{padding-left: 50px;}
+       #itemCost{padding-left: 170px;}
+
+    #p2-2, #shippingHandlingFee{
+        display: inline-block;
+        position: relative;
+        top: -20px;
+    }
+        #p2-2{padding-left: 50px;}
+        #shippingHandlingFee{padding-left: 80px;}
+    
+    #p3-3, #totalBeforeTax{
+        display: inline-block;
+        position: relative;
+        top: -30px;
+    }
+        #p3-3{padding-left: 50px;}
+        #totalBeforeTax{padding-left: 128px;}
+
+    #p4-4, #tax{
+        display: inline-block;
+        position: relative;
+        top: -50px;
+    }
+        #p4-4{padding-left: 52px;}
+        #tax{padding-left: 100px;}
+    
+    #p5-5, #overallCost{
+        display: inline-block;
+        color: red;
+        font-weight: bolder;
+        position: relative;
+        top: -50px;
+    }
+        #overallCost{padding-left: 200px;}
+       
+
+    </style>
+
+
+</head>
+<body>
+
+    <h1>Final Task 1</h1>
+    <div class="main1">
+        <form>
+
+                <p id="p1">1st Number:</p> <input class="input1" type="text" size="20" id="num1">
+                <p id="p2">2nd Number:</p> <input class="input2" type="text" size="20" id="num2">
+                <p id="rslt">Result:</p> <input type="text" id="result" disabled="disabled"> 
+
+                <br>
+
+                <input type="button" value="Addition" onclick="addNumbers()" id="add">
+                <input type="button" value="Subtraction" onclick="subNumbers()" id="sub">
+                <br>
+                <input type="button" value="Multiply" onclick="mulNumbers()" id="mul">
+                <input type="button" value="Division" onclick="divNumbers()" id="div">
+                <br>
+                <input type="button" value="Clear" onclick="clearBtn()" id="clr">
+                <input type="button" value="About" onclick="aboutBtn()" id="abt">
+
+          
+        </form>
+    </div>
+
+    <h1>Final Task 2</h1>
+    <div class="main4">
+
+        <section>
+            <p style="display:inline-block"> Number of Items: </p>
+            <input type="text" size="10" id="numOfItems">
+            <input type="button" value="Enter" onclick="Process()">
+        </section>
+        
+
+        <h3 style="text-align: center;">Order Summary</h3>
+        <p id="p1-1">Items( <span id="show_numOfItems"></span> )</p> <p id="itemCost"></p>
+        <p id="p2-2"> Shipping and Handling: </p> <p id="shippingHandlingFee"> $4.99 </p>
+        <p id="p3-3"> Total before tax: </p> <p id="totalBeforeTax"> $0.00 </p>
+        <p id="p4-4"> Estimated tax(10%): </p> <p id="tax"> $0.00 </p>
+        <p id="p5-5"> Order Total: </p> <p id="overallCost"> $0.00</p>
+    </div>
+</body>
+</html>
